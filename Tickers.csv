@@ -1,0 +1,31 @@
+Currencies,CurrName,Cryptocurrencies,Cryptonames,Trending,Trendnames,MutualFunds,Mutualnames
+EURUSD=X,EUR/USD,BTC-USD,Bitcoin USD,TSLA,"Tesla, Inc.",TEFQX,Firsthand Technology Opportunities Fund
+JPY=X,USD/JPY,ETH-USD,Ethereum USD,FNMA,Federal National Mortgage Association,MCSMX,Matthews China Small Companies Fund
+GBPUSD=X,GBP/USD,USDT-USD,Tether USD,SNDL,Sundial Growers Inc.,FHKIX,Fidelity Advisor China Region Fund Class I
+AUDUSD=X,AUD/USD,BNB-USD,BinanceCoin USD,ENTX,Entera Bio Ltd.,FHKAX,Fidelity Advisor China Region Fund Class A
+NZDUSD=X,NZD/USD,ADA-USD,Cardano USD,PLTR,Palantir Technologies Inc.,FCHKX,Fidelity Advisor China Region Fund Class C
+EURJPY=X,EUR/JPY,DOGE-USD,Dogecoin USD,SNAP,Snap Inc.,BFTIX,Baron Fifth Avenue Growth Fund Institutional Class
+GBPJPY=X,GBP/JPY,XRP-USD,XRP USD,CCIV,Churchill Capital Corp IV,SCATX,Virtus Zevenbergen Innovative Growth Stock Fund Class I
+EURGBP=X,EUR/GBP,USDC-USD,USDCoin USD,CXM,"Sprinklr, Inc.",FERCX,Fidelity Advisor Emerging Asia Fund Class C
+EURCAD=X,EUR/CAD,DOT1-USD,Polkadot USD,FMCC,Federal Home Loan Mortgage Corporation,FEATX,Fidelity Advisor Emerging Asia Fund Class M
+EURSEK=X,EUR/SEK,HEX-USD,HEX USD,BEST,BEST Inc.,FERIX,Fidelity Advisor Emerging Asia Fund Class I
+EURCHF=X,EUR/CHF,UNI3-USD,Uniswap USD,DQ,Daqo New Energy Corp.,WBEIX,William Blair Emerging Markets Growth Fund Class I
+EURHUF=X,EUR/HUF,BCH-USD,BitcoinCash USD,WKHS,Workhorse Group Inc.,BFOCX,Berkshire Focus Fund
+EURJPY=X,EUR/JPY,LTC-USD,Litecoin USD,IDEX,"Ideanomics, Inc.",BIEMX,William Blair Emerging Markets Growth Fund Class R6
+CNY=X,USD/CNY,SOL1-USD,Solana USD,IGC,"India Globalization Capital, Inc.",ENTIX,ERShares Global Fund Institutional Class
+HKD=X,USD/HKD,LINK-USD,Chainlink USD,ORPH,Orphazyme A/S,DMCRX,Driehaus Micro Cap Growth Fund
+SGD=X,USD/SGD,MATIC-USD,MaticNetwork USD,VIAC,ViacomCBS Inc.,BMGAX,BlackRock Mid-Cap Growth Equity Portfolio Investor A Shares
+INR=X,USD/INR,THETA-USD,THETA USD,MRIN,Marin Software Incorporated,BMGCX,BlackRock Mid-Cap Growth Equity Portfolio Investor C Shares
+MXN=X,USD/MXN,XLM-USD,Stellar USD,SNOW,Snowflake Inc.,ILLLX,Transamerica Capital Growth Fund Class C
+PHP=X,USD/PHP,VET-USD,InternetComputer USD,AGTC,Applied Genetic Technologies Corporation,MMDEX,Praxis Growth Index Fund Class I
+IDR=X,USD/IDR,ICP1-USD,VeChain USD,DOC.V,CloudMD Software & Services Inc.,HSSIX,Emerald Banking and Finance Fund Institutional Class
+THB=X,USD/THB,ETC-USD,EthereumClassic USD,FSR,Fisker Inc.,FFBFX,Emerald Banking and Finance Fund Investor Class
+MYR=X,USD/MYR,FIL-USD,FilecoinFutures USD,FSLR,"First Solar, Inc.",MPACX,Matthews Asia Growth Fund Investor Class
+ZAR=X,USD/ZAR,TRX-USD,TRON USD,FNMAS,Federal National Mortgage Association,TSEGX,Touchstone Sands Capital Emerging Markets Growth Fund Institutional Class
+RUB=X,USD/RUB,XMR-USD,Monero USD,MCFE,McAfee Corp.,HSSAX,Emerald Banking and Finance Fund Class A
+,,EOS-USD,EOS USD,LOOP,"Loop Industries, Inc.",TDMTX,Templeton Developing Markets Trust Class C
+,,,,KBH,KB Home,,
+,,,,FNMAT,Federal National Mortgage Association,,
+,,,,APP,AppLovin Corporation,,
+,,,,WOW.AX,Woolworths Group Limited,,
+,,,,VTNR,"Vertex Energy, Inc.",,
