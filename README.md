@@ -6,7 +6,7 @@ A simple streamlit webapp to present graphically the open, volume and closing pr
 2. yfinance 
 3. pandas
 
-### To run use following command on windows command prompt:
+### To run, use following command on windows command prompt:
 streamlit run stock_price_app.py
 
 Basic Outline of the App | Volume and Closing
