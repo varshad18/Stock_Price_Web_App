@@ -1,6 +1,14 @@
 # Stock_Price_Web_App
 A simple streamlit webapp to present graphically the open, volume and closing prices of stocks of various different companies. 
 
+### Required Modules: 
+1. streamlit 
+2. yfinance 
+3. pandas
+
+### To run use following command on windows command prompt:
+streamlit run stock_price_app.py
+
 Basic Outline of the App | Volume and Closing
 :-------------------------:|:-------------------------:
 ![Outline](Screenshots/1.jpg) |   ![VolumeClosing](Screenshots/2.jpg)
