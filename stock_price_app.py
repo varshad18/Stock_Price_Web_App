@@ -1,9 +1,17 @@
 import yfinance as yf
 import streamlit as st
-import pandas_datareader
 import pandas as pd
-from pandas_datareader import data
 import pyfolio as pf
+
+df=pd.read_csv('Tickers.csv')
+currency=df['Currencies'].dropna()
+curname=df['CurrName'].dropna()
+cryptocur=df['Cryptocurrencies'].dropna()
+crypname=df['Cryptonames'].dropna()
+mutualfunds=df['MutualFunds'].dropna()
+mutualname=df['Mutualnames'].dropna()
+trending=df['Trending'].dropna()
+trendnames=df['Trendnames'].dropna()
 
 html_temp = """
     <div style="background-color:#6600cc ;padding:10px;margin-bottom:10px;">
@@ -13,7 +21,7 @@ html_temp = """
 st.markdown(html_temp, unsafe_allow_html=True)
 
 st.sidebar.title("Pages")
-Pages=['Google','Amazon','Bitcoin USD','Currencies','Others']
+Pages=['Trending','Mutual Funds','CryptoCurrencies','Currencies','Google','Amazon','Others']
 add_pages = st.sidebar.selectbox('', Pages)
 st.sidebar.title("Note:")
 html_temp6 = """
@@ -33,7 +41,51 @@ st.sidebar.markdown(html_temp6, unsafe_allow_html=True)
 # Set the start and end date
 start_date = '1990-05-31'
 end_date = '2020-05-31'
-if add_pages=='Google':
+
+if add_pages=='Trending':
+    teams = st.selectbox('',trending)
+    # https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
+    #define the ticker symbol
+    tickerSymbol = teams
+    #get data on this ticker
+    tickerData = yf.Ticker(tickerSymbol)
+    #get the historical prices for this ticker
+    tickerDf = tickerData.history(period='1d', start='1990-5-31', end='2020-5-31')
+    # Open	High	Low	Close	Volume	Dividends	Stock Splits
+
+    x=int(df[df['Trending']==tickerSymbol].index.values)
+    st.write("Stock price details for ",df.iloc[x]['Trendnames'])
+    st.write("Open Price:")
+    st.line_chart(tickerDf.Open)
+    st.write("Volume of Shares:")
+    st.line_chart(tickerDf.Volume)
+    st.write("Closing Price:")
+    st.area_chart(tickerDf.Close)
+
+elif add_pages=='Mutual Funds':
+    # https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
+    #define the ticker symbol
+    teams = st.selectbox('',mutualfunds)
+    tickerSymbol = teams
+
+    x=int(df[df['MutualFunds']==tickerSymbol].index.values)
+    st.write("Stock price details for ",df.iloc[x]['Mutualnames'])
+
+    #get data on this ticker
+    tickerData = yf.Ticker(tickerSymbol)
+    #get the historical prices for this ticker
+    tickerDf = tickerData.history(period='1d', start='1990-5-31', end='2020-5-31')
+    # Open	High	Low	Close	Volume	Dividends	Stock Splits
+
+    st.write("Details for ",tickerSymbol)
+    st.write("Open Price:")
+    st.line_chart(tickerDf.Open)
+    st.write("Volume of Shares:")
+    st.line_chart(tickerDf.Volume)
+    st.write("Closing Price:")
+    st.area_chart(tickerDf.Close)
+
+elif add_pages=='Google':
     # https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
     #define the ticker symbol
     tickerSymbol = 'GOOGL'
@@ -43,7 +95,7 @@ if add_pages=='Google':
     tickerDf = tickerData.history(period='1d', start='1990-5-31', end='2020-5-31')
     # Open	High	Low	Close	Volume	Dividends	Stock Splits
 
-    st.write("Details for ",tickerSymbol)
+    st.write("Details for GOOGLE")
     st.write("Open Price:")
     st.line_chart(tickerDf.Open)
     st.write("Volume of Shares:")
@@ -62,38 +114,47 @@ elif add_pages=='Amazon':
     #get the historical prices for this ticker
     tickerDf = tickerData.history(period='1d', start='1990-5-31', end='2020-5-31')
     # Open	High	Low	Close	Volume	Dividends	Stock Splits
-    st.write("Details for ",tickerSymbol)
+    st.write("Details for AMAZON")
     st.write("Open Price:")
     st.line_chart(tickerDf.Open)
     st.write("Volume of Shares:")
     st.line_chart(tickerDf.Volume)
     st.write("Closing Price:")
     st.area_chart(tickerDf.Close)
-elif add_pages=='Bitcoin USD':
-    tickerSymbol = 'BTC-USD'
+    
+elif add_pages=='CryptoCurrencies':
+    teams1 = st.selectbox('',cryptocur)
+    tickerSymbol = teams1
+    x=int(df[df['Cryptocurrencies']==tickerSymbol].index.values)
+    st.write("Stock price details for ",df.iloc[x]['Cryptonames'])
     #get data on this ticker
     tickerData = yf.Ticker(tickerSymbol)
     #get the historical prices for this ticker
     tickerDf = tickerData.history(period='1d', start='1990-5-31', end='2020-5-31')
     # Open	High	Low	Close	Volume	Dividends	Stock Splits
-    st.write("Details for ",tickerSymbol)
+    
     st.write("Open Price:")
     st.line_chart(tickerDf.Open)
     st.write("Volume of Shares:")
     st.line_chart(tickerDf.Volume)
     st.write("Closing Price:")
     st.area_chart(tickerDf.Close)
+
 elif add_pages=='Currencies':
-    cur=['EURUSD=X','JPY=X']
-    teams = st.selectbox('',cur)
-    st.write("Stock price details for ")
+    #cur=['EURUSD=X','JPY=X','INR=X']
+    teams = st.selectbox('',currency)
     tickerSymbol = teams
+    
+    x=int(df[df['Currencies']==tickerSymbol].index.values)
+    st.write("Stock price details for ",df.iloc[x]['CurrName'])
+
+    #st.write("Stock price details for ",tickerSymbol)
     #get data on this ticker
     tickerData = yf.Ticker(tickerSymbol)
     #get the historical prices for this ticker
     tickerDf = tickerData.history(period='1d', start='1990-5-31', end='2020-5-31')
     # Open	High	Low	Close	Volume	Dividends	Stock Splits
-    st.write("Details for ",tickerSymbol)
+    
     st.write("Open Price:")
     st.line_chart(tickerDf.Open)
     st.write("Volume of Shares:")
