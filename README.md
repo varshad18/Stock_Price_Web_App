@@ -9,6 +9,8 @@ A simple streamlit webapp to present graphically the open, volume and closing pr
 ### To run, use following command on windows command prompt:
 streamlit run stock_price_app.py
 
+#### All data plotted graphically is obtained fromm yahoo finance using yfinance module
+
 Basic Outline of the App | Volume and Closing
 :-------------------------:|:-------------------------:
 ![Outline](Screenshots/1.jpg) |   ![VolumeClosing](Screenshots/2.jpg)
