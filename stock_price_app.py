@@ -44,7 +44,6 @@ end_date = '2020-05-31'
 
 if add_pages=='Trending':
     teams = st.selectbox('',trending)
-    # https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
     #define the ticker symbol
     tickerSymbol = teams
     #get data on this ticker
@@ -63,7 +62,6 @@ if add_pages=='Trending':
     st.area_chart(tickerDf.Close)
 
 elif add_pages=='Mutual Funds':
-    # https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
     #define the ticker symbol
     teams = st.selectbox('',mutualfunds)
     tickerSymbol = teams
@@ -86,7 +84,6 @@ elif add_pages=='Mutual Funds':
     st.area_chart(tickerDf.Close)
 
 elif add_pages=='Google':
-    # https://towardsdatascience.com/how-to-get-stock-data-using-python-c0de1df17e75
     #define the ticker symbol
     tickerSymbol = 'GOOGL'
     #get data on this ticker
